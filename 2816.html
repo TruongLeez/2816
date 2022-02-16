@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Danh sach san pham</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var Hinh anh, Ten sp, Gia
+	</script>
+	<table border="1" cellpadding="5">
+	<thead>
+		<tr>
+			<th>Hinh anh</th>
+			<th>Ten san pham</th>
+			<th>Gia ban</th>
+		</tr>
+	</thead>
+	<tbody>
+		<script type="text/javascript">
+			var dssp = []
+			var N = Math.floor(Math.random() * 10) + 1
+			for (var i = 1; i < N; i++) {
+				dssp.push({
+					'Hinh_anh': 'Hinh anh ' + i,
+					'Ten_sp': "Sp " + i,
+					'Gia_ban': '1000000' * i,
+				})
+			}
+			var index = 0
+			for(var item of dssp) {
+				document.write(`<tr>
+						<td>${item.Hinh_anh}</td>
+						<td>${item.Ten_sp}</td>
+						<td>${item.Gia_ban}</td>
+					</tr>`)
+			}
+		</script>
+	</tbody>
+</table>
+</body>
+</html>
